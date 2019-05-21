@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <cmath>
 #include "Matrix2.h"
 using namespace std;
 
@@ -164,6 +165,34 @@ Maths3D::Matrix2& Maths3D::Matrix2::operator*=(const Maths3D::Matrix2 &m2) {
 }
 
 /**
+ * Vector transformation for 2-Dimensional space
+ * @param v
+ * @return Vector2
+ */
+Maths3D::Vector2 Maths3D::Matrix2::operator*(const Maths3D::Vector2 &v) {
+    Maths3D::Vector2 temp_vec2;
+
+    temp_vec2.x = (matrix2[0] * v.x) + (matrix2[1] * v.y);
+    temp_vec2.y = (matrix2[2] * v.x) + (matrix2[3] * v.x);
+
+    return temp_vec2;
+}
+
+/**
+ * Vector transformation for 2-Dimensional space
+ * @param v
+ * @return Vector2
+ */
+Maths3D::Vector2 Maths3D::Matrix2::operator*=(const Maths3D::Vector2 &v) {
+    Maths3D::Vector2 temp_vec2;
+
+    temp_vec2.x = (matrix2[0] * v.x) + (matrix2[1] * v.y);
+    temp_vec2.y = (matrix2[2] * v.x) + (matrix2[3] * v.x);
+
+    return temp_vec2;
+}
+
+/**
  * Sets this Matrix as an identity matrix
  * Def: A matrix in which all the elements of the principal diagonals are ones and all others are zeroes
  * Effect: Multiplying a given matrix by an identity matrix is to leave the given unchanged
@@ -174,6 +203,64 @@ void Maths3D::Matrix2::set_as_identity() {
     }
     matrix2[0] = 0.0f;
     matrix2[3] = 0.0f;
+}
+
+/**
+ * Set this Matrix as a rotation matrix counter clockwise
+ * - This will rotate a 2-Dimensional vector space counter clockwise
+ */
+void Maths3D::Matrix2::set_as_rotation90_counter_clockwise() {
+    for(int i = 0; i < 4; i++){
+        matrix2[i] = 0.0f;
+    }
+    matrix2[0] = roundf(cos(90.0f));
+    matrix2[1] = roundf(-sin(90.0f));
+    matrix2[2] = roundf(sin(90.0f));
+    matrix2[3] = roundf(cos(90.0f));
+}
+
+/**
+ * Set this Matrix as a rotation matrix counter clockwise on theta
+ * - This will rotate a 2-Dimensional vector space counter clockwise on theta
+ * @param theta
+ */
+void Maths3D::Matrix2::set_as_rotationTheta_counter_clockwise(float theta) {
+    for(int i = 0; i < 4; i++){
+        matrix2[i] = 0.0f;
+    }
+    matrix2[0] = roundf(cos(theta));
+    matrix2[1] = roundf(-sin(theta));
+    matrix2[2] = roundf(sin(theta));
+    matrix2[3] = roundf(cos(theta));
+}
+
+/**
+ * Set this Matrix as a rotation matrix clockwise
+ * - This will rotate a 2-Dimensional vector space clockwise
+ */
+void Maths3D::Matrix2::set_as_rotation90_clockwise() {
+    for(int i = 0; i < 4; i++){
+        matrix2[i] = 0.0f;
+    }
+    matrix2[0] = roundf(cos(90.0f));
+    matrix2[1] = roundf(sin(90.0f));
+    matrix2[2] = roundf(-sin(90.0f));
+    matrix2[3] = roundf(cos(90.0f));
+}
+
+/**
+ * Set this Matrix as a rotation matrix clockwise on theta
+ * - This will rotate a 2-Dimensional vector space clockwise on theta
+ * @param theta
+ */
+void Maths3D::Matrix2::set_as_rotationTheta_clockwise(float theta) {
+    for(int i = 0; i < 4; i++){
+        matrix2[i] = 0.0f;
+    }
+    matrix2[0] = roundf(cos(theta));
+    matrix2[1] = roundf(sin(theta));
+    matrix2[2] = roundf(-sin(theta));
+    matrix2[3] = roundf(cos(theta));
 }
 
 /**

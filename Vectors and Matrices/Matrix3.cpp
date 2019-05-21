@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <cmath>
 #include "Matrix3.h"
 using namespace std;
 
@@ -234,6 +235,36 @@ Maths3D::Matrix3& Maths3D::Matrix3::operator*=(const Maths3D::Matrix3 &m2) {
 }
 
 /**
+ * Vector transformation for 3-Dimensional space
+ * @param v
+ * @return Vector3
+ */
+Maths3D::Vector3 Maths3D::Matrix3::operator*(const Maths3D::Vector3 &v) {
+    Maths3D::Vector3 temp_vec3;
+
+    temp_vec3.x = (matrix3[0] * v.x) + (matrix3[1] * v.y) + (matrix3[2] * v.z);
+    temp_vec3.y = (matrix3[3] * v.x) + (matrix3[4] * v.y) + (matrix3[5] * v.z);
+    temp_vec3.z = (matrix3[6] * v.x) + (matrix3[7] * v.y) + (matrix3[8] * v.z);
+
+    return temp_vec3;
+}
+
+/**
+ * Vector transformation for 3-Dimensional space
+ * @param v
+ * @return Vector3
+ */
+Maths3D::Vector3 Maths3D::Matrix3::operator*=(const Maths3D::Vector3 &v) {
+    Maths3D::Vector3 temp_vec3;
+
+    temp_vec3.x = (matrix3[0] * v.x) + (matrix3[1] * v.y) + (matrix3[2] * v.z);
+    temp_vec3.y = (matrix3[3] * v.x) + (matrix3[4] * v.y) + (matrix3[5] * v.z);
+    temp_vec3.z = (matrix3[6] * v.x) + (matrix3[7] * v.y) + (matrix3[8] * v.z);
+
+    return temp_vec3;
+}
+
+/**
  * Sets this Matrix as an identity matrix
  * Def: A matrix in which all the elements of the principal diagonals are ones and all others are zeroes
  * Effect: Multiplying a given matrix by an identity matrix is to leave the given unchanged
@@ -245,6 +276,100 @@ void Maths3D::Matrix3::set_as_identity() {
     matrix3[0] = 1.0f;
     matrix3[4] = 1.0f;
     matrix3[8] = 1.0f;
+}
+
+/**
+ * Set this Matrix as a rotation matrix about the x-axis
+ * - This will rotate a 3-Dimensional vector space about the x-axis
+ */
+void Maths3D::Matrix3::set_as_rotation90_x_axis() {
+    for(int i = 0; i < 9; i++){
+        matrix3[i] = 0.0f;
+    }
+    matrix3[0] = 1.0f;
+    matrix3[4] = roundf(cos(90.0f));
+    matrix3[5] = roundf(-sin(90.0f));
+    matrix3[7] = roundf(sin(90.0f));
+    matrix3[8] = roundf(cos(90.0f));
+}
+
+/**
+ * Set this Matrix as a rotation matrix about the x-axis on theta
+ * - This will rotate a 3-Dimensional vector space about the x-axis on theta
+ * @param theta
+ */
+void Maths3D::Matrix3::set_as_rotationTheta_x_axis(float theta) {
+    for(int i = 0; i < 9; i++){
+        matrix3[i] = 0.0f;
+    }
+    matrix3[0] = 1.0f;
+    matrix3[4] = roundf(cos(theta));
+    matrix3[5] = roundf(-sin(theta));
+    matrix3[7] = roundf(sin(theta));
+    matrix3[8] = roundf(cos(theta));
+}
+
+/**
+ * Set this Matrix as a rotation matrix about the y-axis
+ * - This will rotate a 3-Dimensional vector space about the y-axis
+ */
+void Maths3D::Matrix3::set_as_rotation90_y_axis() {
+    for(int i = 0; i < 9; i++){
+        matrix3[i] = 0.0f;
+    }
+    matrix3[0] = roundf(cos(90.0f));
+    matrix3[2] = roundf(sin(90.0f));
+    matrix3[4] = 1.0f;
+    matrix3[6] = roundf(-sin(90.0f));
+    matrix3[8] = roundf(cos(90.0f));
+}
+
+/**
+ * Set this Matrix as a rotation matrix about the y-axis on theta
+ * - This will rotate a 3-Dimensional vector space about the y-axis on theta
+ * @param theta
+ */
+void Maths3D::Matrix3::set_as_rotationTheta_y_axis(float theta) {
+    for(int i = 0; i < 9; i++){
+        matrix3[i] = 0.0f;
+    }
+    matrix3[0] = roundf(cos(theta));
+    matrix3[2] = roundf(sin(theta));
+    matrix3[4] = 1.0f;
+    matrix3[6] = roundf(-sin(theta));
+    matrix3[8] = roundf(cos(theta));
+}
+
+/**
+ * Set this Matrix as a rotation matrix about the z-axis
+ * - This will rotate a 3-Dimensional vector space about the z-axis
+ */
+void Maths3D::Matrix3::set_as_rotation90_z_axis() {
+    for(int i = 0; i < 9; i++){
+        matrix3[i] = 0.0f;
+    }
+    matrix3[0] = roundf(cos(90.0f));
+    matrix3[1] = roundf(-sin(90.0f));
+    matrix3[3] = roundf(sin(90.0f));
+    matrix3[4] = roundf(cos(90.0f));
+    matrix3[8] = 1.0f;
+}
+
+/**
+ * Set this Matrix as a rotation matrix about the z-axis on theta
+ * - This will rotate a 3-Dimensional vector space about the z-axis on theta
+ * @param theta
+ */
+void Maths3D::Matrix3::set_as_rotationTheta_z_axis(float theta) {
+    for(int i = 0; i < 9; i++){
+        matrix3[i] = 0.0f;
+    }
+    matrix3[0] = roundf(cos(theta));
+    matrix3[1] = roundf(-sin(theta));
+    matrix3[3] = roundf(sin(theta));
+    matrix3[4] = roundf(cos(theta));
+    matrix3[8] = 1.0f;
+}
 }
 
 /**

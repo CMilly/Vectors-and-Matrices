@@ -8,6 +8,7 @@
 #ifndef VECTORS_AND_MATRICES_MATRIX2_H
 #define VECTORS_AND_MATRICES_MATRIX2_H
 
+#include "Vector2.h"
 namespace Maths3D{
     /**
      * Matrix2 class
@@ -29,7 +30,13 @@ namespace Maths3D{
         Matrix2 operator*=(float k);
         Matrix2& operator*(const Matrix2 &m2);
         Matrix2& operator*=(const Matrix2 &m2);
+        Vector2 operator*(const Vector2 &v);
+        Vector2 operator*=(const Vector2 &v);
         void set_as_identity();
+        void set_as_rotation90_counter_clockwise();
+        void set_as_rotationTheta_counter_clockwise(float theta);
+        void set_as_rotation90_clockwise();
+        void set_as_rotationTheta_clockwise(float theta);
         void transpose();
         float determinant();
         Matrix2& inverse();

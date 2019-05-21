@@ -15,9 +15,10 @@ namespace Maths3D{
      */
     class Vector2 {
     private:
+    public:
         float x;
         float y;
-    public:
+
         Vector2();
         Vector2(float _x, float _y);
         Vector2& operator=(const Vector2 &v2);

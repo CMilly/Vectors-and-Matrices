@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cmath>
 #include "Matrix4.h"
+#include "Vector4.h"
 using namespace std;
 
 /**
@@ -311,6 +312,38 @@ Maths3D::Matrix4& Maths3D::Matrix4::operator*=(const Maths3D::Matrix4 &m2) {
 }
 
 /**
+ * Vector transformation for 4-Dimensional space
+ * @param v
+ * @return Vector4
+ */
+Maths3D::Vector4 Maths3D::Matrix4::operator*(const Maths3D::Vector4 &v) {
+    Maths3D::Vector4 temp_vec4;
+
+    temp_vec4.x = (matrix4[0] * v.x) + (matrix4[1] * v.y) + (matrix4[2] * v.z) + (matrix4[3] * v.w);
+    temp_vec4.y = (matrix4[4] * v.x) + (matrix4[5] * v.y) + (matrix4[6] * v.z) + (matrix4[7] * v.w);
+    temp_vec4.z = (matrix4[8] * v.x) + (matrix4[9] * v.y) + (matrix4[10] * v.z) + (matrix4[11] * v.w);
+    temp_vec4.w = (matrix4[12] * v.x) + (matrix4[13] * v.y) + (matrix4[14] * v.z) + (matrix4[15] * v.w);
+
+    return temp_vec4;
+}
+
+/**
+ * Vector transformation for 4-Dimensional space
+ * @param v
+ * @return Vector4
+ */
+Maths3D::Vector4 Maths3D::Matrix4::operator*=(const Maths3D::Vector4 &v) {
+    Maths3D::Vector4 temp_vec4;
+
+    temp_vec4.x = (matrix4[0] * v.x) + (matrix4[1] * v.y) + (matrix4[2] * v.z) + (matrix4[3] * v.w);
+    temp_vec4.y = (matrix4[4] * v.x) + (matrix4[5] * v.y) + (matrix4[6] * v.z) + (matrix4[7] * v.w);
+    temp_vec4.z = (matrix4[8] * v.x) + (matrix4[9] * v.y) + (matrix4[10] * v.z) + (matrix4[11] * v.w);
+    temp_vec4.w = (matrix4[12] * v.x) + (matrix4[13] * v.y) + (matrix4[14] * v.z) + (matrix4[15] * v.w);
+
+    return temp_vec4;
+}
+
+/**
  * Sets this Matrix as an identity matrix
  * Def: A matrix in which all the elements of the principal diagonals are ones and all others are zeroes
  * Effect: Multiplying a given matrix by an identity matrix is to leave the given unchanged
@@ -326,7 +359,7 @@ void Maths3D::Matrix4::set_as_identity() {
 }
 
 /**
- * Set this Matrix as a rotation matrix abour the x-axis
+ * Set this Matrix as a rotation matrix about the x-axis
  * - This will rotate a 4-Dimensional vector space about the x-axis
  */
 void Maths3D::Matrix4::set_as_rotation90_x_axis() {
@@ -359,7 +392,7 @@ void Maths3D::Matrix4::set_as_rotationTheta_x_axis(float theta) {
 }
 
 /**
- * Set this Matrix as a rotation matrix abour the y-axis
+ * Set this Matrix as a rotation matrix about the y-axis
  * - This will rotate a 4-Dimensional vector space about the y-axis
  */
 void Maths3D::Matrix4::set_as_rotation90_y_axis() {
@@ -392,7 +425,7 @@ void Maths3D::Matrix4::set_as_rotationTheta_y_axis(float theta) {
 }
 
 /**
- * Set this Matrix as a rotation matrix abour the z-axis
+ * Set this Matrix as a rotation matrix about the z-axis
  * - This will rotate a 4-Dimensional vector space about the z-axis
  */
 void Maths3D::Matrix4::set_as_rotation90_z_axis() {

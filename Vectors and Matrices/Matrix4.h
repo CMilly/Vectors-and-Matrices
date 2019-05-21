@@ -8,6 +8,8 @@
 #ifndef VECTORS_AND_MATRICES_MATRIX4_H
 #define VECTORS_AND_MATRICES_MATRIX4_H
 
+#include "Vector4.h"
+
 namespace Maths3D{
     /**
      * Matrix4 class
@@ -31,6 +33,8 @@ namespace Maths3D{
         Matrix4 operator*=(float k);
         Matrix4& operator*(const Matrix4 &m2);
         Matrix4& operator*=(const Matrix4 &m2);
+        Vector4 operator*(const Vector4 &v);
+        Vector4 operator*=(const Vector4 &v);
         void set_as_identity();
         void set_as_rotation90_x_axis();
         void set_as_rotationTheta_x_axis(float theta);
