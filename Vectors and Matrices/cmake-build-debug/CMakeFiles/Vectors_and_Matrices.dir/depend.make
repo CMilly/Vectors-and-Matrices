@@ -10,6 +10,9 @@ CMakeFiles/Vectors_and_Matrices.dir/Matrix3.cpp.o: ../Matrix3.h
 CMakeFiles/Vectors_and_Matrices.dir/Matrix4.cpp.o: ../Matrix4.cpp
 CMakeFiles/Vectors_and_Matrices.dir/Matrix4.cpp.o: ../Matrix4.h
 
+CMakeFiles/Vectors_and_Matrices.dir/Vector2.cpp.o: ../Vector2.cpp
+CMakeFiles/Vectors_and_Matrices.dir/Vector2.cpp.o: ../Vector2.h
+
 CMakeFiles/Vectors_and_Matrices.dir/Vector3.cpp.o: ../Vector3.cpp
 CMakeFiles/Vectors_and_Matrices.dir/Vector3.cpp.o: ../Vector3.h
 
@@ -19,6 +22,7 @@ CMakeFiles/Vectors_and_Matrices.dir/Vector4.cpp.o: ../Vector4.h
 CMakeFiles/Vectors_and_Matrices.dir/main.cpp.o: ../Matrix2.h
 CMakeFiles/Vectors_and_Matrices.dir/main.cpp.o: ../Matrix3.h
 CMakeFiles/Vectors_and_Matrices.dir/main.cpp.o: ../Matrix4.h
+CMakeFiles/Vectors_and_Matrices.dir/main.cpp.o: ../Vector2.h
 CMakeFiles/Vectors_and_Matrices.dir/main.cpp.o: ../Vector3.h
 CMakeFiles/Vectors_and_Matrices.dir/main.cpp.o: ../Vector4.h
 CMakeFiles/Vectors_and_Matrices.dir/main.cpp.o: ../main.cpp

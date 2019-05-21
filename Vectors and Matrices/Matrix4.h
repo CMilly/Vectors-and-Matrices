@@ -1,6 +1,9 @@
-//
-// Created by cameron on 5/20/2019.
-//
+/**
+ * Created by: Cameron Mims
+ * Vectors and Matrices - Personal Project
+ * File - Matrix4.h
+ * Date (Started) - 05/13/19
+ */
 
 #ifndef VECTORS_AND_MATRICES_MATRIX4_H
 #define VECTORS_AND_MATRICES_MATRIX4_H
@@ -29,6 +32,12 @@ namespace Maths3D{
         Matrix4& operator*(const Matrix4 &m2);
         Matrix4& operator*=(const Matrix4 &m2);
         void set_as_identity();
+        void set_as_rotation90_x_axis();
+        void set_as_rotationTheta_x_axis(float theta);
+        void set_as_rotation90_y_axis();
+        void set_as_rotationTheta_y_axis(float theta);
+        void set_as_rotation90_z_axis();
+        void set_as_rotationTheta_z_axis(float theta);
         void transpose();
         float determinant();
         Matrix4& inverse();

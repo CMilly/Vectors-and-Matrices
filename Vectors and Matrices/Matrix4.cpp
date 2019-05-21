@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <cmath>
 #include "Matrix4.h"
 using namespace std;
 
@@ -322,6 +323,105 @@ void Maths3D::Matrix4::set_as_identity() {
     matrix4[5] = 1.0f;
     matrix4[10] = 1.0f;
     matrix4[15] = 1.0;
+}
+
+/**
+ * Set this Matrix as a rotation matrix abour the x-axis
+ * - This will rotate a 4-Dimensional vector space about the x-axis
+ */
+void Maths3D::Matrix4::set_as_rotation90_x_axis() {
+    for(int i = 0; i < 16; i++){
+        matrix4[i] = 0.0f;
+    }
+    matrix4[0] = 1.0f;
+    matrix4[5] = roundf(cos(90.0f));
+    matrix4[6] = roundf(-sin(90.0f));
+    matrix4[9] = roundf(sin(90.0f));
+    matrix4[10] = roundf(cos(90.0f));
+    matrix4[15] = 1.0f;
+}
+
+/**
+ * Set this Matrix as a rotation matrix about the x-axis on theta
+ * - This will rotate a 4-Dimensional vector space about the x-axis on theta
+ * @param theta
+ */
+void Maths3D::Matrix4::set_as_rotationTheta_x_axis(float theta) {
+    for(int i = 0; i < 16; i++){
+        matrix4[i] = 0.0f;
+    }
+    matrix4[0] = 1.0f;
+    matrix4[5] = roundf(cos(theta));
+    matrix4[6] = roundf(-sin(theta));
+    matrix4[9] = roundf(sin(theta));
+    matrix4[10] = roundf(cos(theta));
+    matrix4[15] = 1.0f;
+}
+
+/**
+ * Set this Matrix as a rotation matrix abour the y-axis
+ * - This will rotate a 4-Dimensional vector space about the y-axis
+ */
+void Maths3D::Matrix4::set_as_rotation90_y_axis() {
+    for(int i = 0; i < 16; i++){
+        matrix4[i] = 0.0f;
+    }
+    matrix4[0] = roundf(cos(90.0f));
+    matrix4[2] = roundf(sin(90.0f));
+    matrix4[5] = 1.0f;
+    matrix4[8] = roundf(-sin(90.0f));
+    matrix4[10] = roundf(cos(90.0f));
+    matrix4[15] = 1.0f;
+}
+
+/**
+ * Set this Matrix as a rotation matrix about the y-axis on theta
+ * - This will rotate a 4-Dimensional vector space about the y-axis on theta
+ * @param theta
+ */
+void Maths3D::Matrix4::set_as_rotationTheta_y_axis(float theta) {
+    for(int i = 0; i < 16; i++){
+        matrix4[i] = 0.0f;
+    }
+    matrix4[0] = roundf(cos(theta));
+    matrix4[2] = roundf(sin(theta));
+    matrix4[5] = 1.0f;
+    matrix4[8] = roundf(-sin(theta));
+    matrix4[10] = roundf(cos(theta));
+    matrix4[15] = 1.0f;
+}
+
+/**
+ * Set this Matrix as a rotation matrix abour the z-axis
+ * - This will rotate a 4-Dimensional vector space about the z-axis
+ */
+void Maths3D::Matrix4::set_as_rotation90_z_axis() {
+    for(int i = 0; i < 16; i++){
+        matrix4[i] = 0.0f;
+    }
+    matrix4[0] = roundf(cos(90.0f));
+    matrix4[1] = roundf(-sin(90.0f));
+    matrix4[4] = roundf(sin(90.0f));
+    matrix4[5] = roundf(cos(90.0f));
+    matrix4[10] = 1.0f;
+    matrix4[15] = 1.0f;
+}
+
+/**
+ * Set this Matrix as a rotation matrix about the z-axis on theta
+ * - This will rotate a 4-Dimensional vector space about the z-axis on theta
+ * @param theta
+ */
+void Maths3D::Matrix4::set_as_rotationTheta_z_axis(float theta) {
+    for(int i = 0; i < 16; i++){
+        matrix4[i] = 0.0f;
+    }
+    matrix4[0] = roundf(cos(theta));
+    matrix4[1] = roundf(-sin(theta));
+    matrix4[4] = roundf(sin(theta));
+    matrix4[5] = roundf(cos(theta));
+    matrix4[10] = 1.0f;
+    matrix4[15] = 1.0f;
 }
 
 /**

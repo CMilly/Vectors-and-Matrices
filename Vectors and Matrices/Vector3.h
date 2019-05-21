@@ -1,6 +1,9 @@
-//
-// Created by cameron on 5/19/2019.
-//
+/**
+ * Created by: Cameron Mims
+ * Vectors and Matrices - Personal Project
+ * File - Vector3.h
+ * Date (Started) - 05/13/19
+ */
 
 #ifndef VECTORS_AND_MATRICES_VECTOR3_H
 #define VECTORS_AND_MATRICES_VECTOR3_H
