@@ -26,5 +26,5 @@ Over my summer break of what is currently Spring 2019, I told myself that I want
   - Quaternions
   
   
-   ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Quaternion_2.svg/1200px-Quaternion_2.svg.png)
+   ![alt text](http://www.tobynorris.com/work/prog/csharp/quatview/help/orientations_and_quaternionsb4.PNG)
   
