@@ -6,7 +6,9 @@ Over my summer break of what is currently Spring 2019, I told myself that I want
 
 # Important Concepts to Understand
   - Vectors
-  ![alt text](https://mathinsight.org/media/image/image/vector_parallelogram_law.png)
+  ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/3D_Vector.svg/300px-3D_Vector.svg.png)
+  
+  
   - Matrices
   - Linear Algebra
   - Quaternions
