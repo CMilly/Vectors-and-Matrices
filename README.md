@@ -6,14 +6,25 @@ Over my summer break of what is currently Spring 2019, I told myself that I want
 
 # Important Concepts to Understand
   - Vectors
+  
+  
   ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/3D_Vector.svg/300px-3D_Vector.svg.png)
   
   
   - Matrices
+  
+  
   ![alt text](https://newvitruvian.com/images/sizeof-vector.gif)
   
   
   - Linear Algebra
+  
+  
    ![alt text](https://4.bp.blogspot.com/-9Apj2QC98l0/Ws90aLaIY2I/AAAAAAAALZw/VkNC2antiGUpjVjB7LJiYHLAKeEXXlfagCPcBGAYYCw/s1600/image9.png)
   
+  
   - Quaternions
+  
+  
+   ![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Quaternion_2.svg/1200px-Quaternion_2.svg.png)
+  
