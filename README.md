@@ -14,7 +14,7 @@ Over my summer break of what is currently Spring 2019, I told myself that I want
   - Matrices
   
   
-  ![alt text](https://newvitruvian.com/images/sizeof-vector.gif)
+  ![alt text](https://cdn.kastatic.org/googleusercontent/9XeqQ2stwpGbXuli1TWSbnHQwITfrYV_AtmjMFEtQZbAo9VvWQ0KYNBnyRx5x9Ekpwh_Pdwzu4dC6b3Y0Wb0Qsu5)
   
   
   - Linear Algebra
