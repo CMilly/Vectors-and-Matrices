@@ -10,5 +10,6 @@ Over my summer break of what is currently Spring 2019, I told myself that I want
   
   
   - Matrices
+  ![alt text](https://cdn.kastatic.org/googleusercontent/rk4fR1jNJsGUfdHOc87UzuQh2zokwYDoVo3Hk1m3s6ToGDgW6KxgrsUeIj8-CJeV6cNf6WB8B6sRHt3BoGBdVY7h)
   - Linear Algebra
   - Quaternions
