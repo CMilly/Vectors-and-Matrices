@@ -37,10 +37,17 @@ Since the scope of this project is to only cover the conecepts of a Math Engine 
 - Ability to showcase transformations and rotations by graphing (GNUplot, graphics.h, boost library, etc..).
 - Code cleanup, mathematical checks, and syntax
 
-# Resources
+# Resources (Not all resources are shown yet)
    - Vectors
       - https://math.dartmouth.edu/archive/m22s07/public_html/VectorSlides.pdf
+      - https://www.khanacademy.org/math/linear-algebra/matrix-transformations/linear-transformations/v/vector-transformations
+      - https://www.wikihow.com/Normalize-a-Vector
+      - http://mines.lumpylumpy.com/Electronics/Computers/Software/Cpp/Graphics/Vector/DotProduct.php#.XOVtbMhKiMp
+      - https://www.gamedev.net/forums/topic/362459-dot-product-between-3d-and-4d-vector/
+      - https://www.mathsisfun.com/algebra/vectors-cross-product.html
    - Matrices
-   - Linear Algebra
+      - https://www.mathsisfun.com/algebra/matrix-inverse.html
+      - https://www.youtube.com/watch?v=kK-Uj2nJgus
+      - https://www.khanacademy.org/math/linear-algebra/matrix-transformations/determinant-depth/v/linear-algebra-simpler-4x4-determinant
   
   
