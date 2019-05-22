@@ -3,3 +3,10 @@ Project that implements both Vectors and Matrices that allow for the transformat
 
 # Abstract
 Over my summer break of what is currently Spring 2019, I told myself that I wanted to learn new conecpts and ideas involving development. I have always wanted to understand the inner workings of game development and the game engines that operate behind the scenes to make everything possible. When conducting research I learned their is not a sort of one-in-all game engine, but rather multiple engines that work unanimously together to produce an overall effect. That being said, to truly understand how another engine works, you must understad the engine prior sort of like a hierarchical structure. This structure in the game development/engine world goes as: Math Engine, Physics Engine and then Rendering Engine, not including everything in between that is needed as well. With all this being said, I sought out my research involving game engine's starting with as mentioned above, the Math Engine.
+
+# Important Concepts to Understand
+  - Vectors
+  ![alt text](https://mathinsight.org/media/image/image/vector_parallelogram_law.png)
+  - Matrices
+  - Linear Algebra
+  - Quaternions
