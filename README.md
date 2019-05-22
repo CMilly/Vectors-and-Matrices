@@ -39,6 +39,7 @@ Since the scope of this project is to only cover the conecepts of a Math Engine 
 
 # Resources
    - Vectors
+      - https://math.dartmouth.edu/archive/m22s07/public_html/VectorSlides.pdf
    - Matrices
    - Linear Algebra
   
