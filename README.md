@@ -32,7 +32,7 @@ As of now this project is a placeholder for the overall Math Engine project. Par
 - Matrix2, Matrix3, and Matrix4 class all representing Matrices in opposing dimensional spaces
 - Mathematial conecpts for both Vectors and Matrices
 
-# Updates (to be)
+# TODO
 Since the scope of this project is to only cover the conecepts of a Math Engine in computer graphics, implementation of Quaternions are the final part of this 4-part project to be instantiated accordingly. Apart from this, extra implementation may include:
 - Ability to showcase transformations and rotations by graphing (GNUplot, graphics.h, boost library, etc..).
 - Code cleanup, mathematical checks, and syntax
